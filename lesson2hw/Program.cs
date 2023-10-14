@@ -4,33 +4,22 @@
     {
         static void Main(string[] args)
         {
-            //Sort.sortInject();
             
             int[,] a = { { 7, 3, 2 }, { 4, 9, 6 }, { 1, 8, 5 } };
-            int[] tempArr = new int[a.GetLength(0)*a.GetLength(1)];
-            int k =0;
-            for (int i=0; i<a.GetLength(0); i++)
-            {
-                for (int j=0; j<a.GetLength(1); j++)
-                {
-
-                    tempArr[k] = a[i,j];
-                    k++;
-                    Console.Write(a[i, j]+"\t");
-                }
-                Console.WriteLine();
-            }
-            Console.WriteLine("!!!!!!!!!!!!");
-            for (int i = 0; i < tempArr.Length; i++)
-            {
-                Console.Write(tempArr[i] + " ");
-            }
-            Console.WriteLine("Next>>>");
+            int sizeM = a.GetLength(0);
+            int sizeN = a.GetLength(1);
+            Console.WriteLine("Не сортированный исходный массив");
+            PrintArray.printArr(a);
+            int[] tempArr = TransformArray.toArray(a);
+            Console.WriteLine("Не сортированный одномерный массив");
+            PrintArray.printArr(tempArr);
             Sort.mergeSort(tempArr, 0, tempArr.Length - 1);
-            for (int i=0;i<tempArr.Length;i++)
-            {
-                Console.Write(tempArr[i]+" ");
-            }
+            Console.WriteLine("\nСортированный одномерный массив");
+            PrintArray.printArr(tempArr);
+            a = TransformArray.toMatrix(tempArr, sizeM, sizeN);
+            Console.WriteLine("\nСортированный 2у мерный массив");
+            PrintArray.printArr(a);
+
         }
     }
 }
