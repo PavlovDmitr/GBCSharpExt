@@ -28,7 +28,7 @@ namespace lesson2hw
             if (sizeM * sizeN != array.Length) 
             {
                 throw new IndexOutOfRangeException($"{nameof(array)}," +
-                    $" Size of array must be equals sum {nameof(sizeM)} and {nameof(sizeN)}"); 
+                    $" Size of array must be equals mult {nameof(sizeM)} and {nameof(sizeN)}"); 
             }
             int[,] tempArr = new int[sizeM,sizeN];
             int index = 0;
