@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "lesson1": {
+      "commandName": "Project",
+      "commandLineArgs": "10 15"
+    },
+    "WSL": {
+      "commandName": "WSL2",
+      "distributionName": ""
+    }
+  }
+}
