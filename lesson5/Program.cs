@@ -5,6 +5,8 @@ internal class Program
     delegate void myDelegate(string message);
     private static void Main(string[] args)
     {
+        Console.Write("");
+        Console.WriteLine(MainMenuElements.sum);
         /*
         List<Action> actions = new List<Action> { Print, PrintSecond };
         List<myDelegate> delegateList = new List<myDelegate>()
